@@ -18,10 +18,18 @@ class Account
     add_to_history(date, 0, debit)
   end
 
+  def print_history
+    body
+  end
+
   private
 
   def add_to_history(date, credit, debit)
     current_transaction = Information.new(date, credit, debit)
     @transaction_history << current_transaction
+  end
+
+  def body
+    "date || credit || debit || balance ||"
   end
 end

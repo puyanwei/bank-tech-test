@@ -53,6 +53,13 @@ RSpec.describe Account do
     end
   end
 
+  context '#body' do
+    it 'contains the columns of the print statment' do
+      account.deposit(0, '09/22/17')
+      expect(account.print_history).to eq("date || credit || debit || balance ||")
+    end
+  end
+
   # context '#print_history' do
   #   it 'prints out the whole history of transactions' do
   #     account.withdrawl(500, "14/01/1912")
