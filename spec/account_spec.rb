@@ -36,8 +36,8 @@ RSpec.describe Account do
     end
   end
 
-  context '#current_transaction' do
-    it 'shows the latest transaction' do
+  context '#add_to_history' do
+    it 'adds the current transaction the transaction history' do
       account.deposit(200, '09/22/17')
       account.deposit(400, '10/22/17')
       expect(account.transaction_history[1].credit).to eq(400)
