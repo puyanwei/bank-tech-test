@@ -1,7 +1,9 @@
+DEFAULT_BALANCE = 0
+
 class Account
   attr_reader :balance
 
   def initialize
-    @balance = 0
+    @balance = DEFAULT_BALANCE
     end
 end

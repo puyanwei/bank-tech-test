@@ -1,13 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/puyan/Projects/bank/spec/test_spec.rb": [
+      "/Users/puyan/Projects/bank/spec/account_spec.rb": [
         1,
         null,
         1,
         2,
         null,
-        1,
         1,
         1,
         1,
@@ -17,14 +16,35 @@
       ],
       "/Users/puyan/Projects/bank/lib/account.rb": [
         1,
+        null,
+        1,
         1,
         null,
         1,
         1,
         null,
         null
+      ],
+      "/Users/puyan/Projects/bank/spec/data_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/puyan/Projects/bank/lib/data.rb": [
+
       ]
     },
-    "timestamp": 1506942745
+    "timestamp": 1506944089
   }
 }
