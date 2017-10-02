@@ -21,7 +21,7 @@ class Account
   private
 
   def add_to_history(date, credit, debit)
-    current_transaction = Info.new(date, credit, debit)
+    current_transaction = Information.new(date, credit, debit)
     @transaction_history << current_transaction
   end
 end
