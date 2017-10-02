@@ -11,24 +11,36 @@ RSpec.describe Account do
 
   context '#deposit' do
     it 'puts money into the balance' do
-      account.deposit(500)
+      account.deposit(500, "09/22/17")
       expect(account.balance).to eq(500)
     end
+    # it "adds a date to the trainsaction" do
+    #   account.deposit(400, "09/22/17")
+    #   expect(info.date).to eq("09/22/17")
+    # end
   end
 
   context '#withdrawl' do
     it 'puts money into the balance' do
-      account.deposit(500)
-      account.withdrawl(250)
+      account.deposit(500, "09/22/17")
+      account.withdrawl(250, "09/22/17")
       expect(account.balance).to eq(250)
     end
   end
 
   context '#show_balance' do
     it 'shows the current balance' do
-      account.deposit(3000)
-      account.withdrawl(2500)
+      account.deposit(3000, "09/22/17")
+      account.withdrawl(2500, "09/22/17")
       expect(account.balance).to eq(500)
+    end
+  end
+
+  context '#transaction_history' do
+    it 'puts a transaction history into the transaction history array when you make a deposit' do
+      account.deposit(3000, "09/22/17")
+      expect(account.transaction_history[0].credit).to eq(3000)
+      expect(account.transaction_history.length).to eq(1)
     end
   end
 end
