@@ -23,4 +23,12 @@ RSpec.describe Account do
       expect(account.balance).to eq(250)
     end
   end
+
+  context '#show_balance' do
+    it 'shows the current balance' do
+      account.deposit(3000)
+      account.withdrawl(2500)
+      expect(account.balance).to eq(500)
+    end
+  end
 end
