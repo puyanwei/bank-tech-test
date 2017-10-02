@@ -2,9 +2,13 @@
   "RSpec": {
     "coverage": {
       "/Users/puyan/Projects/bank/spec/test_spec.rb": [
-
+        1,
+        0,
+        0,
+        null,
+        null
       ]
     },
-    "timestamp": 1506940435
+    "timestamp": 1506941272
   }
 }
