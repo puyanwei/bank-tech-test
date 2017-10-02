@@ -1,12 +1,12 @@
-require 'bank'
+require 'account'
 
-Rspec.describe Bank do
-  subject(:bank) {described_class.new}
+RSpec.describe Account do
+  subject(:account) {described_class.new}
 
   describe do
-    context 'this is a test to see that rspec is setup' do
-      expect(bank).toEql()
+    context '#initialize'
+    it 'balance should start at zero' do
+      expect(account.balance).to eq(0)
     end
   end
-
 end
