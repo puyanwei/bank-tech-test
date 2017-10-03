@@ -10,14 +10,14 @@ class Account
     @transaction_history = []
     end
 
-  def deposit(credit, date)
+  def deposit(date, credit)
     @balance += credit
-    add_to_history(date, credit, 0)
+    add_to_history(date, credit, 0, balance)
   end
 
-  def withdrawl(debit, date)
+  def withdrawl(date, debit)
     @balance -= debit
-    add_to_history(date, 0, debit)
+    add_to_history(date, 0, debit, balance)
   end
 
   def print_history
@@ -27,8 +27,8 @@ class Account
 
   private
 
-  def add_to_history(date, credit, debit)
-    current_transaction = Information.new(date, credit, debit)
+  def add_to_history(date, credit, debit, balance)
+    current_transaction = Information.new(date, credit, debit, balance)
     @transaction_history << current_transaction
   end
 

@@ -59,12 +59,12 @@ RSpec.describe Account do
     end
   end
 
-  context '#print_history' do
-    it 'prints out the whole history of transactions' do
-      # account.withdrawl(500, "14/01/1912")
-      # account.deposit(2000, "13/01/1912")
-      account.deposit(1000, "10/01/1912")
-      expect{account.print_history}.to output("date || credit || debit || balance ||\n10/01/1912\n").to_stdout
-    end
-  end
+  # context '#print_history' do
+  #   it 'prints out the whole history of transactions' do
+  #     # account.withdrawl(500, "14/01/1912")
+  #     # account.deposit(2000, "13/01/1912")
+  #     account.deposit(1000, "10/01/1912")
+  #     expect{account.print_history}.to output("date || credit || debit || balance ||\n10/01/1912\n").to_stdout
+  #   end
+  # end
 end

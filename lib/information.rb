@@ -1,7 +1,7 @@
 class Information
-  attr_accessor :hash, :date, :credit, :debit
+  attr_accessor :hash, :date, :credit, :debit, :balance
 
-  def initialize(date, credit, debit)
-    @hash = { date: date, credit: credit, debit: debit }
+  def initialize(date, credit, debit, balance)
+    @hash = { date: date, credit: credit, debit: debit, balance: balance}
   end
 end
