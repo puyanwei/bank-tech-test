@@ -19,7 +19,8 @@ class Account
   end
 
   def print_history
-    body
+    add_columns
+    loop_transactions
   end
 
   private
@@ -29,7 +30,11 @@ class Account
     @transaction_history << current_transaction
   end
 
-  def body
-    "date || credit || debit || balance ||"
+  def add_columns
+    puts "date || credit || debit || balance ||"
+  end
+
+  def loop_transactions
+    @transaction_history.each{|transaction| puts "#{transaction.date}" + "||" + "#{@balance}"}
   end
 end
