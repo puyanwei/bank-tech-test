@@ -53,7 +53,7 @@ RSpec.describe Account do
     end
   end
 
-  context '#add_columns' do
+  context '#header' do
     it 'adds the columns of the print statment' do
       expect {account.print_history}.to output("date || credit || debit || balance ||\n").to_stdout
     end

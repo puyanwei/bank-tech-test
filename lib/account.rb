@@ -19,7 +19,7 @@ class Account
   end
 
   def print_history
-    add_columns
+    header
     loop_transactions
   end
 
@@ -30,7 +30,7 @@ class Account
     @transaction_history << current_transaction
   end
 
-  def add_columns
+  def header
     puts "date || credit || debit || balance ||"
   end
 
