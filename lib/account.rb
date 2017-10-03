@@ -37,7 +37,8 @@ class Account
   end
 
   def loop_transactions
-    @transaction_history.each do |transaction| puts transaction[:date]
+    @transaction_history.reverse.each do |transaction|
+      puts transaction.log[:date].to_s + ' || ' + transaction.log[:credit].to_s + ' || ' + transaction.log[:debit].to_s + ' || ' + transaction.log[:balance].to_s
     end
   end
 end
