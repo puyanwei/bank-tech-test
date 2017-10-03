@@ -8,7 +8,7 @@ class Account
   def initialize
     @balance = DEFAULT_BALANCE
     @transaction_history = []
-    end
+  end
 
   def deposit(date, credit)
     @balance += credit
@@ -16,6 +16,7 @@ class Account
   end
 
   def withdrawl(date, debit)
+    check_errors(debit)
     @balance -= debit
     add_to_history(date, 0, debit, balance)
   end
@@ -26,6 +27,10 @@ class Account
   end
 
   private
+
+  def check_errors(debit)
+    raise('Insufficient funds') if debit > @balance
+  end
 
   def add_to_history(date, credit, debit, balance)
     current_transaction = Information.new(date, credit, debit, balance)
