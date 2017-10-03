@@ -20,7 +20,7 @@ class Account
 
   def print_history
     header
-    loop_transactions
+    # loop_transactions
   end
 
   private
@@ -34,7 +34,7 @@ class Account
     puts "date || credit || debit || balance ||"
   end
 
-  def loop_transactions
-    @transaction_history.each{|transaction| puts "#{transaction.date}" + "||" + "#{@balance}"}
-  end
+  # def loop_transactions
+  #   @transaction_history.each{|transaction| puts "#{transaction.date}" + "||" + "#{@balance}"}
+  # end
 end

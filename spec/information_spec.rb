@@ -3,11 +3,10 @@ require 'Information'
 RSpec.describe Information do
   subject(:information) { described_class.new('14/01/2012', 1000, 400) }
 
-  context '#initialize' do
-    it 'should have a date, credit, and debit as entries' do
-      expect(information.date).to eq('14/01/2012')
-      expect(information.credit).to eq(1000)
-      expect(information.debit).to eq(400)
+    context "#initialize" do
+      it "shows hash table of the customer's transaction" do
+        hash = {:date=>"14/01/2012", :credit=>1000, :debit=>400}
+        expect(subject.transaction).to eq(hash)
+      end
     end
-  end
 end
