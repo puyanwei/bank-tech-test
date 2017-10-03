@@ -11,27 +11,27 @@ RSpec.describe Account do
 
   context '#deposit' do
     it 'puts money into the balance' do
-      account.deposit(500, '09/22/17')
+      account.deposit('09/22/17', 500)
       expect(account.balance).to eq(500)
     end
     it 'adds a date to the transaction' do
-      account.deposit(400, '09/22/17')
-      expect(account.transaction_history[0].hash[:date]).to eq('09/22/17')
+      account.deposit('09/22/17', 400)
+      expect(account.transaction_history[0].log[:date]).to eq('09/22/17')
     end
   end
 
   context '#withdrawl' do
-    it 'puts money into the balance' do
-      account.deposit(500, '09/22/17')
-      account.withdrawl(250, '09/22/17')
+    it 'deducts money from the balance' do
+      account.deposit('09/22/17', 500)
+      account.withdrawl('09/22/17', 250)
       expect(account.balance).to eq(250)
     end
   end
 
   context '#show_balance' do
     it 'shows the current balance' do
-      account.deposit(3000, '09/22/17')
-      account.withdrawl(2500, '09/22/17')
+      account.deposit('09/22/17', 3000)
+      account.withdrawl('09/22/17', 2500)
       expect(account.balance).to eq(500)
     end
   end
@@ -40,15 +40,15 @@ RSpec.describe Account do
     it 'adds the current transaction the transaction history' do
       account.deposit(200, '09/22/17')
       account.deposit(400, '10/22/17')
-      expect(account.transaction_history[1].hash[:credit]).to eq(400)
-      expect(account.transaction_history[1].hash[:date]).to eq('10/22/17')
+      expect(account.transaction_history[1].log[:credit]).to eq(400)
+      expect(account.transaction_history[1].log[:date]).to eq('10/22/17')
     end
   end
 
   context '#transaction_history' do
     it 'puts a transaction history into the transaction history array when you make a deposit' do
       account.deposit(3000, '09/22/17')
-      expect(account.transaction_history[0].hash[:credit]).to eq(3000)
+      expect(account.transaction_history[0].log[:credit]).to eq(3000)
       expect(account.transaction_history.length).to eq(1)
     end
   end
