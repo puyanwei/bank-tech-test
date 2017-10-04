@@ -1,5 +1,5 @@
-RSpec.describe Information do
-  subject(:information) { described_class.new('14/01/2012', 1000, 0, 1000) }
+RSpec.describe Transaction do
+  subject(:transaction) { described_class.new('14/01/2012', 1000, 0, 1000) }
 
   context '#initialize' do
     it 'shows hash table of the customers transaction' do

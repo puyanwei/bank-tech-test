@@ -1,5 +1,6 @@
 RSpec.describe Account do
   subject(:account) { described_class.new("John Smith") }
+  let(:information) { double :transaction }
 
   context '#initialize' do
     it 'balance should start at zero' do

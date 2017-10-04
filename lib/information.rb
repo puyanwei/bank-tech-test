@@ -1,4 +1,4 @@
-class Information
+class Transaction
   attr_accessor :log, :date, :credit, :debit, :balance
 
   def initialize(date, credit, debit, balance)

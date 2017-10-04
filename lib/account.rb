@@ -32,7 +32,7 @@ class Account
   end
 
   def add_to_history(date, credit, debit, balance)
-    current_transaction = Information.new(date, credit, debit, balance)
+    current_transaction = Transaction.new(date, credit, debit, balance)
     @transaction_history.unshift(current_transaction)
   end
 
