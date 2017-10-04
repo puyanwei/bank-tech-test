@@ -1,13 +1,12 @@
-require_relative 'information'
-
 class Account
   DEFAULT_BALANCE = 0
 
-  attr_accessor :balance, :transaction_history
+  attr_accessor :balance, :name,  :transaction_history
 
-  def initialize
+  def initialize(name)
     @balance = DEFAULT_BALANCE
     @transaction_history = []
+    @name = name
   end
 
   def deposit(date, credit)
