@@ -3,8 +3,7 @@ require 'simplecov-console'
 
 require 'bank'
 require 'account'
-require 'information'
-
+require 'transaction'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
                                                                  SimpleCov::Formatter::Console,
