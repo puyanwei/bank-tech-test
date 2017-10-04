@@ -96,7 +96,7 @@
         null,
         null
       ],
-      "/Users/puyan/Projects/bank/spec/information_spec.rb": [
+      "/Users/puyan/Projects/bank/spec/transaction_spec.rb": [
         1,
         2,
         null,
@@ -109,6 +109,6 @@
         null
       ]
     },
-    "timestamp": 1507124495
+    "timestamp": 1507127608
   }
 }

@@ -27,3 +27,11 @@ Type `irb` to enter it and type in `'require ./lib/account.rb`,  `'require ./lib
 To see the tests type in `RSpec` in the project folder.
 
 ## Quality control
+The aim of this exercise was to write high quality code.
+
+This is achieved my for filling the following criteria;
+- All tests are passing.
+- Rubocop linter passes.
+- 95% or above test coverage.
+- Commits are regular, small and have good descriptions.
+- Flog score is low.
