@@ -46,8 +46,8 @@ RSpec.describe Account do
 
   context '#add_to_history' do
     it 'adds the current transaction the transaction history' do
-      account.deposit('09/22/17', 200)
       account.deposit('10/22/17', 400)
+      account.deposit('09/22/17', 200)
       expect(account.transaction_history[1].log[:credit]).to eq(400)
       expect(account.transaction_history[1].log[:date]).to eq('10/22/17')
     end

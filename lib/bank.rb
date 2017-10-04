@@ -7,7 +7,7 @@ class Bank
   end
 
   def open_account(name)
-    account =Account.new(name)
+    account = Account.new(name)
     @accounts << account
   end
 end

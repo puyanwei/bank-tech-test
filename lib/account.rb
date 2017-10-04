@@ -1,7 +1,7 @@
 class Account
   DEFAULT_BALANCE = 0
 
-  attr_accessor :balance, :name,  :transaction_history
+  attr_accessor :balance, :name, :transaction_history
 
   def initialize(name)
     @balance = DEFAULT_BALANCE
@@ -33,7 +33,7 @@ class Account
 
   def add_to_history(date, credit, debit, balance)
     current_transaction = Information.new(date, credit, debit, balance)
-    @transaction_history << current_transaction
+    @transaction_history.unshift(current_transaction)
   end
 
   def header
@@ -41,7 +41,7 @@ class Account
   end
 
   def loop_transactions
-    @transaction_history.reverse.each do |transaction|
+    @transaction_history.each do |transaction|
       puts transaction.log[:date].to_s + ' || ' + transaction.log[:credit].to_s + ' || ' + transaction.log[:debit].to_s + ' || ' + transaction.log[:balance].to_s
     end
   end
