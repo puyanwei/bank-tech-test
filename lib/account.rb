@@ -7,7 +7,7 @@ class Account
     @balance = DEFAULT_BALANCE
     @transaction_history = []
     @name = name
-    
+
   end
 
   def deposit(date, credit)
@@ -43,7 +43,7 @@ class Account
 
   def loop_transactions
     @transaction_history.each do |transaction|
-      puts transaction.log[:date].to_s + ' || ' + transaction.log[:credit].to_s + ' || ' + transaction.log[:debit].to_s + ' || ' + transaction.log[:balance].to_s
+      puts "#{transaction.date} || #{transaction.credit} || #{transaction.debit} || #{transaction.balance}"
     end
   end
 end
