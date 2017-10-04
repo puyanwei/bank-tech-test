@@ -10,7 +10,7 @@ RSpec.describe Bank do
     end
   end
 
-  context '#open' do
+  context '#open_account' do
     it 'opens a new bank account and puts it into the accounts array' do
       bank.open_account("John Smith")
       expect(bank.accounts[0].name).to eq("John Smith")

@@ -6,8 +6,8 @@ class Bank
     @accounts = []
   end
 
-  def open_account(name)
-    account = Account.new(name)
-    @accounts << account
+  def open_account(customer_name)
+    account = Account.new(customer_name)
+    @accounts.unshift(account)
   end
 end

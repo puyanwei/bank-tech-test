@@ -29,13 +29,6 @@ RSpec.describe Account do
     end
   end
 
-  context '#check_errors' do
-    it 'if a withdrawl is larger than the balance throw an error' do
-      account.deposit('12/09/08', 400)
-      expect { account.withdrawl('12/09/08', 500) }.to raise_error('Insufficient funds')
-    end
-  end
-
   context '#show_balance' do
     it 'shows the current balance' do
       account.deposit('09/22/17', 1000)
