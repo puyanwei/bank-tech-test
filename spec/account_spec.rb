@@ -1,13 +1,9 @@
 RSpec.describe Account do
-  subject(:account) { described_class.new("John Smith") }
-  let(:transaction) { double :transaction }
+  subject(:account) { described_class.new }
 
   context '#initialize' do
     it 'balance should start at zero' do
       expect(account.balance).to eq(0)
-    end
-    it 'adds the customers name to the account' do
-      expect(account.name).to eq("John Smith")
     end
   end
 

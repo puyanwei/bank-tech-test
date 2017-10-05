@@ -3,13 +3,9 @@
     "coverage": {
       "/Users/puyan/Projects/bank/spec/account_spec.rb": [
         1,
-        11,
-        1,
+        10,
         null,
         1,
-        1,
-        1,
-        null,
         1,
         1,
         null,
@@ -99,20 +95,13 @@
       "/Users/puyan/Projects/bank/spec/print_statement_spec.rb": [
         1,
         null,
+        1,
+        1,
         2,
         null,
         1,
         1,
         2,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         null
@@ -132,6 +121,6 @@
         null
       ]
     },
-    "timestamp": 1507151508
+    "timestamp": 1507198877
   }
 }
