@@ -12,9 +12,6 @@ The programme mimics a basic banking system.
 The programme can perform the following basic functions:
 
 - Name and create a bank.
-
-![Alt Text](https://github.com/pyan83/bank-tech-test/assets/
-
 - Open an account in their name in the bank.
 - Enter the date for a transaction.
 - Can make deposits and withdrawals.
