@@ -1,7 +1,7 @@
 class Account
   DEFAULT_BALANCE = 0
 
-  attr_accessor :balance, :transaction_history, :current_transaction
+  attr_accessor :balance, :transaction_history
 
   def initialize
     @balance = DEFAULT_BALANCE
@@ -32,7 +32,7 @@ class Account
   end
 
   def add_to_history(date, credit, debit, balance)
-    @current_transaction = Transaction.new(date, credit, debit, balance)
+    current_transaction = Transaction.new(date, credit, debit, balance)
     @transaction_history.unshift(current_transaction)
   end
 end
