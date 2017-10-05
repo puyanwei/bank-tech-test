@@ -10,13 +10,15 @@ class Account
 
   def deposit(date, credit)
     @balance += credit
-    add_to_history(date, credit, 0, balance)
+    deposit = Deposit.new(date, credit, balance)
+    @transaction_history.unshift(deposit)
   end
 
-  def withdrawl(date, debit)
+  def withdrawal(date, debit)
     check_errors(debit)
     @balance -= debit
-    add_to_history(date, 0, debit, balance)
+    withdrawal = Withdrawal.new(date, debit, balance)
+    @transaction_history.unshift(withdrawal)
   end
 
   def print_history
@@ -29,10 +31,5 @@ class Account
 
   def check_errors(debit)
     raise('Insufficient funds') if debit > @balance
-  end
-
-  def add_to_history(date, credit, debit, balance)
-    current_transaction = Transaction.new(date, credit, debit, balance)
-    @transaction_history.unshift(current_transaction)
   end
 end

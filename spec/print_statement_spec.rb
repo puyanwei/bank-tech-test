@@ -1,7 +1,8 @@
 RSpec.describe PrintStatement do
 
   subject(:print_statement) {
-  described_class.new(transaction_history) }
+    described_class.new(transaction_history) 
+  }
   let(:transaction_history) { double :transaction_history }
 
   context '#header' do

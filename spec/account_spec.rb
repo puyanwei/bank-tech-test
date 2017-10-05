@@ -18,10 +18,10 @@ RSpec.describe Account do
     end
   end
 
-  context '#withdrawl' do
+  context '#withdrawal' do
     it 'deducts money from the balance' do
       account.deposit('09/22/17', 500)
-      account.withdrawl('09/22/17', 250)
+      account.withdrawal('09/22/17', 250)
       expect(account.balance).to eq(250)
     end
   end
@@ -29,7 +29,7 @@ RSpec.describe Account do
   context '#show_balance' do
     it 'shows the current balance' do
       account.deposit('09/22/17', 1000)
-      account.withdrawl('09/22/17', 501)
+      account.withdrawal('09/22/17', 501)
       expect(account.balance).to eq(499)
     end
   end
@@ -61,8 +61,8 @@ RSpec.describe Account do
     it 'prints out the whole history of transactions' do
       account.deposit('10/01/2012', 1000)
       account.deposit('13/01/2012', 2000)
-      account.withdrawl('14/01/2012', 500)
-      expect { account.print_history }.to output("date || credit || debit || balance ||\n14/01/2012 || 0 || 500 || 2500\n13/01/2012 || 2000 || 0 || 3000\n10/01/2012 || 1000 || 0 || 1000\n").to_stdout
+      account.withdrawal('14/01/2012', 500)
+      expect { account.print_history }.to output("date || credit || debit || balance ||\n14/01/2012 || 500 || 0 || 2500\n13/01/2012 || 2000 || 0 || 3000\n10/01/2012 || 1000 || 0 || 1000\n").to_stdout
     end
   end
 end
