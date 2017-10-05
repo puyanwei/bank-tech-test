@@ -12,7 +12,7 @@ The programme mimics a basic banking system.
 The programme can perform the following basic functions:
 
 - Name and create a bank.
-- Open an account in their name in the bank.
+- Open an account in the bank.
 - Enter the date for a transaction.
 - Can make deposits and withdrawals.
 - Check their balance.
