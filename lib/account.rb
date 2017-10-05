@@ -15,7 +15,6 @@ class Account
   end
 
   def withdrawal(date, debit)
-    check_errors(debit)
     @balance -= debit
     withdrawal = Withdrawal.new(date, debit, balance)
     @transaction_history.unshift(withdrawal)
@@ -25,11 +24,5 @@ class Account
     print_statement = PrintStatement.new(@transaction_history)
     print_statement.header
     print_statement.loop_transactions
-  end
-
-  private
-
-  def check_errors(debit)
-    raise('Insufficient funds') if debit > @balance
   end
 end
