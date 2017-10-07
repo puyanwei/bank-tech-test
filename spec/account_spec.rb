@@ -21,7 +21,6 @@ RSpec.describe Account do
   context '#withdrawal' do
     it 'deducts money from the balance' do
       account.make_deposit('09/22/17', 500)
-      p account.balance
       account.make_withdrawal('09/22/17', 250)
       expect(account.balance).to eq(250)
     end

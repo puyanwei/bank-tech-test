@@ -15,17 +15,22 @@ Use the terminal to clone this repo by typing in
 Install the relevant gems by typing in `bundle install`.
 Then `cd bank-tech-test` to go to the root folder.
 
-Type `pry` to enter it and type in `'require ./lib/account.rb`, and `'require ./lib/bank.rb`.
-Alternatively you can choose to use `irb`.
+Type `pry` to enter the sandbox and type in `'require ./lib/load`, and then `load`.
+You can choose to use `irb` instead of `pry`.
 
+```ruby
+require './lib/load'
+=> true
+pry(main)> true
+=> true
+```
 To see the tests type in `rspec` in the project folder.
-
 ## Features
 The programme can perform the following basic functions:
 
 - Names and creates a bank.
 ```ruby
-pry(main)> bank = Bank.new("HSBC")
+bank = Bank.new("HSBC")
 => #<Bank:0x007ff3c116dc00
  @accounts=[],
  @name="HSBC">
@@ -43,7 +48,7 @@ bank.open_account(account)
 ```
 - Makes a deposit.
 ```ruby
-pry(main)> account.deposit("08/14/17", 5000)
+account.make_deposit("08/14/17", 5000)
 => [#<Deposit:0x007ff3c132d7e8
   @balance=5000,
   @credit=5000,
@@ -52,7 +57,7 @@ pry(main)> account.deposit("08/14/17", 5000)
 ```
 - Makes a withdrawal.
 ```ruby
-account.withdrawal("09/14/17", 3500)
+account.make_withdrawal("09/14/17", 3500)
 => [#<Withdrawal:0x007ff3c133cc70
   @balance=1500,
   @credit=3500,
@@ -61,11 +66,21 @@ account.withdrawal("09/14/17", 3500)
   ```
 - Throws an error if there are insufficient funds to withdrawal.
 ```ruby
-
+account.make_withdrawal(10/14/17, 2000)
+RuntimeError: insufficient funds
 ```
 - Balance checking.
+```ruby
+account.balance
+=> 1500
+```
 - Print out their complete transaction history.
-
+```ruby
+account.print_history
+date || credit || debit || balance
+09/14/17 || 0 || 3500 || 1500
+08/14/17 || 5000 || 0 || 5000
+```
 ## Quality control
 The aim of this exercise was to write high quality code.
 

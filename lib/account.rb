@@ -26,7 +26,3 @@ class Account
     print_statement.print
     end
 end
-
-# require'./lib/load'
-# load
-# a = Account.new
