@@ -4,6 +4,11 @@ class PrintStatement
     @transaction_history = transaction_history
   end
 
+  def print
+    header
+    loop_transactions
+  end
+
   def header
     puts 'date || credit || debit || balance ||'
   end

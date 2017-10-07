@@ -22,7 +22,6 @@ class Account
 
   def print_history
     print_statement = PrintStatement.new(@transaction_history)
-    print_statement.header
-    print_statement.loop_transactions
-  end
+    print_statement.print
+    end
 end
