@@ -1,7 +1,3 @@
-require_relative './deposit'
-require_relative './withdrawal'
-require_relative './print_statement'
-
 class Account
   DEFAULT_BALANCE = 0
 
@@ -12,13 +8,14 @@ class Account
     @transaction_history = []
   end
 
-  def deposit(date, credit)
+  def make_deposit(date, credit)
     @balance += credit
     deposit = Deposit.new(date, credit, balance)
     @transaction_history.unshift(deposit)
   end
 
-  def withdrawal(date, debit)
+  def make_withdrawal(date, debit)
+    raise "insufficient funds" if debit > @balance
     @balance -= debit
     withdrawal = Withdrawal.new(date, debit, balance)
     @transaction_history.unshift(withdrawal)
@@ -27,5 +24,9 @@ class Account
   def print_history
     print_statement = PrintStatement.new(@transaction_history)
     print_statement.print
-  end
+    end
 end
+
+# require'./lib/load'
+# load
+# a = Account.new

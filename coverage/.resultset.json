@@ -27,6 +27,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -34,7 +35,7 @@
         1,
         1,
         1,
-        0,
+        1,
         null,
         null,
         null,
@@ -67,6 +68,10 @@
         1,
         1,
         2,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null
@@ -107,18 +112,6 @@
         null,
         null
       ],
-      "/Users/puyan/Projects/bank/spec/error_spec.rb": [
-        1,
-        2,
-        null,
-        1,
-        1,
-        1,
-        2,
-        null,
-        null,
-        null
-      ],
       "/Users/puyan/Projects/bank/spec/print_statement_spec.rb": [
         1,
         null,
@@ -142,6 +135,6 @@
         null
       ]
     },
-    "timestamp": 1507385299
+    "timestamp": 1507389320
   }
 }
