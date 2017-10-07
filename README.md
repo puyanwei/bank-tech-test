@@ -21,7 +21,7 @@ Alternatively you can choose to use `irb` instead of `pry`.
 ```ruby
 require './lib/load'
 => true
-pry(main)> true
+load
 => true
 ```
 To see the tests type in `rspec` in the project folder.
