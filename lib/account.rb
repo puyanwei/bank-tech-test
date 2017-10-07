@@ -24,5 +24,5 @@ class Account
   def print_history
     print_statement = PrintStatement.new(@transaction_history)
     print_statement.print
-    end
+  end
 end
