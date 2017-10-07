@@ -1,3 +1,5 @@
+require_relative './error'
+
 class Withdrawal
   attr_accessor :date, :credit, :debit, :balance
 

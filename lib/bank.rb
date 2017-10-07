@@ -1,3 +1,5 @@
+require_relative './account'
+
 class Bank
   attr_reader :accounts, :name
 
@@ -6,8 +8,7 @@ class Bank
     @accounts = []
   end
 
-  def open_account
-    account = Account.new
+  def open_account(account)
     @accounts.unshift(account)
   end
 end

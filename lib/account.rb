@@ -1,3 +1,7 @@
+require_relative './deposit'
+require_relative './withdrawal'
+require_relative './print_statement'
+
 class Account
   DEFAULT_BALANCE = 0
 
