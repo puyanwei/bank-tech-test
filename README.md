@@ -22,7 +22,8 @@ The programme can perform the following basic functions:
 Clone this repo with
 `git clone git@github.com:pyan83/bank-tech-test.git`
 
-Install the relevant gems by typing in `bundle install`
+Install the relevant gems by typing in `bundle install`.
+Then `cd bank-tech-test` to go to the root folder.
 
 Type `irb` to enter it and type in `'require ./lib/account.rb`,  `'require ./lib/bank.rb`, and `'require ./lib/account.rb` in the project folder.
 
