@@ -18,5 +18,4 @@ class Transaction
     print_statement = PrintStatement.new(@transaction_history)
     print_statement.print
   end
-
 end

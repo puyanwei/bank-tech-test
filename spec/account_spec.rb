@@ -29,4 +29,17 @@ RSpec.describe Account do
       expect(account.balance).to eq(499)
     end
   end
+
+  context '#print_history' do
+    it 'prints out the whole history of transactions' do
+      account.make_deposit('10/01/2012', 1000)
+      account.make_deposit('13/01/2012', 2000)
+      account.make_withdrawal('14/01/2012', 500)
+      expect { account.print_history }.to output(
+      "date || credit || debit || balance\n" +
+      "14/01/2012 || 0 || 500 || 2500\n" +
+      "13/01/2012 || 2000 || 0 || 3000\n" +
+      "10/01/2012 || 1000 || 0 || 1000\n").to_stdout
+    end
+  end
 end
