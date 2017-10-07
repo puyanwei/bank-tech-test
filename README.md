@@ -24,13 +24,15 @@ To see the tests type in `rspec` in the project folder.
 The programme can perform the following basic functions:
 
 - Names and creates a bank.
+```Ruby
 `[3] pry(main)> bank = Bank.new("HSBC")
 [3] pry(main)> bank = Bank.new("HSBC")
 => #<Bank:0x007ff3c116dc00
  @accounts=[],
  @name="HSBC">`
-
+ ```
 - Creates an account and adds it to the the bank.
+```Ruby
 `[4] pry(main)> account = Account.new
 => #<Account:0x007ff3c11640d8
  @balance=0,
@@ -44,6 +46,7 @@ The programme can perform the following basic functions:
   @balance=0,
   @transaction_history=[]>]
 [7] pry(main)>`
+```
 - Enter the date for a transaction.
 - Can make deposits and withdrawals.
 - Check their balance.
