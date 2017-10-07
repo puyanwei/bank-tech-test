@@ -9,6 +9,8 @@ class PrintStatement
     loop_transactions
   end
 
+  private
+
   def header
     puts 'date || credit || debit || balance ||'
   end

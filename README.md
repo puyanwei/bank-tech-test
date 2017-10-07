@@ -19,8 +19,10 @@ The programme can perform the following basic functions:
 - Print out their complete transaction history.
 
 ## Installation
-Clone this repo by typing
+Clone this repo with
 `git clone git@github.com:pyan83/bank-tech-test.git`
+
+Install the relevant gems by typing in `bundle install`
 
 Type `irb` to enter it and type in `'require ./lib/account.rb`,  `'require ./lib/bank.rb`, and `'require ./lib/account.rb` in the project folder.
 
