@@ -1,28 +1,27 @@
 class Account
   DEFAULT_BALANCE = 0
 
-  attr_accessor :balance, :transaction_history
+  attr_accessor :balance
 
   def initialize
     @balance = DEFAULT_BALANCE
-    @transaction_history = []
+    @transaction = Transaction.new
   end
 
   def make_deposit(date, credit)
     @balance += credit
     deposit = Deposit.new(date, credit, balance)
-    @transaction_history.unshift(deposit)
+    @transaction.add_deposit(deposit)
   end
 
   def make_withdrawal(date, debit)
     raise "insufficient funds" if debit > @balance
     @balance -= debit
     withdrawal = Withdrawal.new(date, debit, balance)
-    @transaction_history.unshift(withdrawal)
+    @transaction.add_withdrawal(withdrawal)
   end
 
   def print_history
-    print_statement = PrintStatement.new(@transaction_history)
-    print_statement.print
+    @transaction.print_history
   end
 end
