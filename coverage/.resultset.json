@@ -34,7 +34,7 @@
         1,
         1,
         1,
-        1,
+        0,
         null,
         null,
         null,
@@ -74,6 +74,7 @@
       "/Users/puyan/Projects/bank/spec/bank_spec.rb": [
         1,
         4,
+        2,
         null,
         1,
         1,
@@ -141,6 +142,6 @@
         null
       ]
     },
-    "timestamp": 1507379205
+    "timestamp": 1507385299
   }
 }

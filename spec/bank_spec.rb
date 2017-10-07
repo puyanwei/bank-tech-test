@@ -1,5 +1,6 @@
 RSpec.describe Bank do
   subject(:bank) { described_class.new("HSBC") }
+  let(:account) { double :account }
 
   context '#initialize' do
     it 'has the name of the bank' do
@@ -12,7 +13,7 @@ RSpec.describe Bank do
 
   context '#open_account' do
     it 'opens a new bank account and puts it into the accounts array' do
-      bank.open_account()
+      bank.open_account(account)
       expect(bank.accounts.length).to eq(1)
     end
   end

@@ -8,10 +8,11 @@ class Withdrawal
     @credit = credit
     @debit = 0
     @balance = balance
+    error_check
   end
 
   def error_check
     error = Error.new
-    error.insufficient_funds(debit, credit)
+    error.insufficient_funds(credit, balance)
   end
 end

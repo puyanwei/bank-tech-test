@@ -26,7 +26,6 @@ The programme can perform the following basic functions:
 - Names and creates a bank.
 ```ruby
 pry(main)> bank = Bank.new("HSBC")
-pry(main)> bank = Bank.new("HSBC")
 => #<Bank:0x007ff3c116dc00
  @accounts=[],
  @name="HSBC">
@@ -42,9 +41,29 @@ bank.open_account(account)
   @balance=0,
   @transaction_history=[]>]
 ```
-- Enter the date for a transaction.
-- Can make deposits and withdrawals.
-- Check their balance.
+- Makes a deposit.
+```ruby
+pry(main)> account.deposit("08/14/17", 5000)
+=> [#<Deposit:0x007ff3c132d7e8
+  @balance=5000,
+  @credit=5000,
+  @date="08/14/17",
+  @debit=0>]
+```
+- Makes a withdrawal.
+```ruby
+account.withdrawal("09/14/17", 3500)
+=> [#<Withdrawal:0x007ff3c133cc70
+  @balance=1500,
+  @credit=3500,
+  @date="09/14/17",
+  @debit=0>
+  ```
+- Throws an error if there are insufficient funds to withdrawal.
+```ruby
+
+```
+- Balance checking.
 - Print out their complete transaction history.
 
 ## Quality control
