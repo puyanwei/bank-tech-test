@@ -16,7 +16,7 @@ Install the relevant gems by typing in `bundle install`.
 Then `cd bank-tech-test` to go to the root folder.
 
 Type `pry` to enter the sandbox and type in `'require ./lib/load`, and then `load`.
-You can choose to use `irb` instead of `pry`.
+Alternatively you can choose to use `irb` instead of `pry`.
 
 ```ruby
 require './lib/load'
@@ -41,6 +41,8 @@ account = Account.new
 => #<Account:0x007ff3c11640d8
  @balance=0,
  @transaction_history=[]>
+ ```
+ ```ruby
 bank.open_account(account)
 => [#<Account:0x007ff3c11640d8
   @balance=0,
