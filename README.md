@@ -24,7 +24,7 @@ Clone this repo by typing
 
 Type `irb` to enter it and type in `'require ./lib/account.rb`,  `'require ./lib/bank.rb`, and `'require ./lib/account.rb` in the project folder.
 
-To see the tests type in `RSpec` in the project folder.
+To see the tests type in `rspec` in the project folder.
 
 ## Quality control
 The aim of this exercise was to write high quality code.
