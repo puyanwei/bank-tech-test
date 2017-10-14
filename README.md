@@ -1,5 +1,5 @@
 # Banking Program
-The programme mimics a basic banking system.
+This programme mimics a basic banking system.
 
 ## Tech Stack
 - Ruby
